@@ -1,0 +1,24 @@
+[package]
+name = "rust花指令生成添加器"
+version = "0.1.1"
+edition = "2024"
+
+[dependencies]
+egui = "0.25.0"
+eframe = "0.25.0"
+pecs = "0.6.0"  # PE文件解析库
+sha2 = "0.10.8"  # 哈希计算库
+crossbeam = "0.8.4"  # 多线程支持
+rand = "0.8.5"  # 随机数生成
+rayon = "1.8.0"  # 并行计算
+log = "0.4.21"
+env_logger = "0.10.2"
+rfd = "0.10.0"  # 文件对话框库
+
+[features]
+default = []
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
